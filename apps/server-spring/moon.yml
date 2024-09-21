@@ -1,0 +1,12 @@
+language: "java"
+type: "application"
+
+tasks:
+  build:
+    command: "./gradlew build"
+  serve:
+    command: "./gradlew bootRun"
+  cleanBuild:
+    command: "./gradlew clean build"
+  test:
+    command: "./gradlew test"

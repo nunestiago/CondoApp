@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Login {{'general.title' | transloco}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Login</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+    <ion-item>
+      <ion-input
+        label="Email / Username"
+        labelPlacement="stacked"
+        placeholder="Enter text"
+        formControlName="email" />
+    </ion-item>
+    <ion-item>
+      <ion-input
+        label="Password"
+        labelPlacement="stacked"
+        placeholder="Enter text"
+        formControlName="password"
+        type="password">
+        <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+      </ion-input>
+    </ion-item>
+    @if(loginForm.hasError("invalid")){
+    <ion-item>
+      <ion-label color="danger">Invalid email or password</ion-label>
+    </ion-item>
+    }
+    <ion-item>
+      <ion-button type="submit" [disabled]="loginForm.invalid || isLoading">
+        Login
+      </ion-button>
+    </ion-item>
+  </form>
+</ion-content>

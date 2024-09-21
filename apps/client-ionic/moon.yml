@@ -1,0 +1,17 @@
+language: "javascript"
+platform: "bun"
+type: "application"
+
+tasks:
+  build:
+    command: "ng build"
+  serve:
+    command: "ng serve"
+  serveIonic:
+    command: "ng serve"
+  watcht:
+    command: "ng build --watch --configuration development"
+  test:
+    command: "ng test"
+  lint:
+    command: "ng lint"
