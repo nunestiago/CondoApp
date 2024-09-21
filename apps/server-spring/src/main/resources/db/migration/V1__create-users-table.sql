@@ -1,14 +1,14 @@
 -- 
-CREATE TABLE users (
-    id SERIAL PRIMARY KEY,
-    username VARCHAR(80) NOT NULL,
-    password VARCHAR(255) NOT NULL,
-    email VARCHAR(80) NOT NULL UNIQUE,
-    role VARCHAR(255) NOT NULL,
-    first_name VARCHAR(255) NOT NULL,
-    last_name VARCHAR(255) NOT NULL,
-    is_active BOOLEAN DEFAULT TRUE,
-    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
-    edited_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
-    edited_by VARCHAR(255) NOT NULL
+CREATE TABLE IF NOT EXISTS users
+(
+    username   TEXT,
+    password   TEXT                NOT NULL,
+    email      TEXT                NOT NULL,
+    user_role  TEXT                NOT NULL,
+    first_name TEXT NOT NULL,
+    last_name  TEXT,
+    is_active  INTEGER DEFAULT (1) NOT NULL,
+    created_at INTEGER DEFAULT (datetime()),
+    edited_at  INTEGER DEFAULT (datetime()),
+    edited_by  TEXT                NOT NULL
 );
