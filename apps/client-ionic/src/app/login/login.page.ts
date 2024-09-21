@@ -52,7 +52,7 @@ export class LoginPage {
     }),
     password: new FormControl('', {
       nonNullable: true,
-      validators: [Validators.minLength(8), Validators.maxLength(80)]]
+      validators: [Validators.minLength(8), Validators.maxLength(80)]
     })
   });
 
