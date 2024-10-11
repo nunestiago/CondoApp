@@ -6,6 +6,7 @@ build/
 !**/src/test/**/build/
 
 condo.db
+secret.properties
 
 ### STS ###
 .apt_generated
