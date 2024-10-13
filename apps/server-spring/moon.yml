@@ -3,10 +3,10 @@ type: "application"
 
 tasks:
   build:
-    command: "./gradlew build"
+    command: "./mvn spring-boot:run"
   serve:
-    command: "./gradlew bootRun"
+    command: "./mvn spring-boot:run"
   cleanBuild:
-    command: "./gradlew clean build"
+    command: "./mvn spring-boot:run"
   test:
-    command: "./gradlew test"
+    command: "./mvn test"
